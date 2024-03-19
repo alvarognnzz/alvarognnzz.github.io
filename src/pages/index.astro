@@ -1,5 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Title from "../components/Title.astro";
+import ProjectCard from "../components/ProjectCard.astro";
 ---
 
 <Layout title="alvgonzx - Indie developer">
@@ -13,24 +15,15 @@ import Layout from "../layouts/Layout.astro";
             </div>
         </section>
         <section class="mt-[356px]">
-            <p class="text-5xl font-horizon text-shadow-blue">projects</p>
+            <Title color="blue">projects</Title>
             <div class="mt-5 flex justify-between">
-                <article class="bg-[#242424] rounded-3xl w-[30%]">
-                    <div class="p-6">
-                        <img
-                            src="images/godot-asset-collection.png"
-                            alt="Godot 4 assets"
-                        />
-                        <p class="text-xl font-semibold mt-4">
-                            Godot asset collection
-                        </p>
-                        <p class="text-[#16px] mt-1">
-                            Collection of assets for creating FPS controllers
-                            using Godot 4. The collection is open source and
-                            available on GitHub.
-                        </p>
-                    </div>
-                </article>
+                <ProjectCard
+                    imgSrc="images/godot-asset-collection.png"
+                    imgAlt="Godot 4 assets"
+                    title="Godot asset collection"
+                    description="Collection of assets for creating FPS controllers using Godot 4. The collection is open source and available on GitHub."
+                >
+                </ProjectCard>
             </div>
         </section>
     </main>
