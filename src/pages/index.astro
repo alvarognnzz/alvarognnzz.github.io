@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Title from "../components/Title.astro";
 import ProjectCard from "../components/ProjectCard.astro";
+import Icon from "../components/Icon.astro";
 ---
 
 <Layout title="alvgonzx - Indie developer">
@@ -16,14 +17,33 @@ import ProjectCard from "../components/ProjectCard.astro";
         </section>
         <section class="mt-[356px]">
             <Title color="blue">projects</Title>
-            <div class="mt-5 flex justify-between">
+            <div class="mt-5 flex justify-start gap-16">
                 <ProjectCard
                     imgSrc="images/godot-asset-collection.png"
                     imgAlt="Godot 4 assets"
                     title="Godot asset collection"
                     description="Collection of assets for creating FPS controllers using Godot 4. The collection is open source and available on GitHub."
-                >
-                </ProjectCard>
+                />
+                <ProjectCard
+                    imgSrc="images/aftx.png"
+                    imgAlt="aftx formatted text system"
+                    title="aftx"
+                    description="alvgonzx’s formatted text is a simple and minimalist formatted text system inspired by Markdown and LaTeX."
+                />
+            </div>
+        </section>
+        <section class="mt-[128px]">
+            <Title color="orange">technologies</Title>
+            <div class="mt-5 flex justify-start gap-8">
+                <Icon imgSrc="images/html.png" imgAlt="HTML logo"/>
+                <Icon imgSrc="images/css.png" imgAlt="CSS logo"/>
+                <Icon imgSrc="images/js.png" imgAlt="JS logo"/>
+                <Icon imgSrc="images/tailwind.png" imgAlt="Tailwind logo"/>
+                <Icon imgSrc="images/astro.png" imgAlt="Astro logo"/>
+                <Icon imgSrc="images/nodejs.png" imgAlt="NodeJS logo"/>
+                <Icon imgSrc="images/python.png" imgAlt="Python logo"/>
+                <Icon imgSrc="images/godot.png" imgAlt="Godot logo"/>
+                <Icon imgSrc="images/git.png" imgAlt="Git logo"/>
             </div>
         </section>
     </main>
@@ -45,5 +65,9 @@ import ProjectCard from "../components/ProjectCard.astro";
 
     .text-shadow-blue {
         text-shadow: -2px -2px #3185fc;
+    }
+
+    .text-shadow-orange {
+        text-shadow: -2px -2px #d08c3c;
     }
 </style>
