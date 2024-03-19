@@ -3,14 +3,35 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="alvgonzx - Indie developer">
-    <main class="mx-[10%] mt-[256px]">
-        <section class="">
-            <h1 class="text-white text-7xl font-horizon text-shadow">
-                alvgonzx
-            </h1>
-            <h2 class="text-white text-[18px]">
-                indie developer who is passionate about open source software
-            </h2>
+    <main class="mx-[15%] mt-[256px]">
+        <section class="flex">
+            <div>
+                <h1 class="text-7xl font-horizon text-shadow-red">alvgonzx</h1>
+                <h2 class="text-[18px]">
+                    indie developer who is passionate about open source software
+                </h2>
+            </div>
+        </section>
+        <section class="mt-[356px]">
+            <p class="text-5xl font-horizon text-shadow-blue">projects</p>
+            <div class="mt-5 flex justify-between">
+                <article class="bg-[#242424] rounded-3xl w-[30%]">
+                    <div class="p-6">
+                        <img
+                            src="images/godot-asset-collection.png"
+                            alt="Godot 4 assets"
+                        />
+                        <p class="text-xl font-semibold mt-4">
+                            Godot asset collection
+                        </p>
+                        <p class="text-[#16px] mt-1">
+                            Collection of assets for creating FPS controllers
+                            using Godot 4. The collection is open source and
+                            available on GitHub.
+                        </p>
+                    </div>
+                </article>
+            </div>
         </section>
     </main>
 </Layout>
@@ -25,7 +46,11 @@ import Layout from "../layouts/Layout.astro";
         font-display: swap;
     }
 
-    .text-shadow {
-        text-shadow: -3px -3px #B74F6F;
+    .text-shadow-red {
+        text-shadow: -3px -3px #b74f6f;
+    }
+
+    .text-shadow-blue {
+        text-shadow: -2px -2px #3185fc;
     }
 </style>
