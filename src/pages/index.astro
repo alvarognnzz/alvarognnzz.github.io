@@ -6,14 +6,15 @@ import Icon from "../components/Icon.astro";
 ---
 
 <Layout title="alvgonzx - Indie developer">
-    <main class="mx-[15%] mt-[256px]">
-        <section class="flex">
+    <main class="mx-[15%] mt-[128px]">
+        <section class="flex justify-between items-center">
             <div>
                 <h1 class="text-7xl font-horizon text-shadow-red">alvgonzx</h1>
                 <h2 class="text-[18px]">
                     indie developer who is passionate about open source software
                 </h2>
             </div>
+            <img src="images/alvgonzx.gif" alt="alvgonzx" class="w-[200px]">
         </section>
         <section class="mt-[356px]">
             <Title color="blue">projects</Title>
@@ -46,6 +47,9 @@ import Icon from "../components/Icon.astro";
                 <Icon imgSrc="images/git.png" imgAlt="Git logo"/>
             </div>
         </section>
+        <section class="mt-[128px]">
+            <Title color="green">about me</Title>
+        </section>
     </main>
 </Layout>
 
@@ -69,5 +73,9 @@ import Icon from "../components/Icon.astro";
 
     .text-shadow-orange {
         text-shadow: -2px -2px #d08c3c;
+    }
+
+    .text-shadow-green {
+        text-shadow: -2px -2px #539E43;
     }
 </style>
