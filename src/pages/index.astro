@@ -14,7 +14,7 @@ import Icon from "../components/Icon.astro";
                     indie developer who is passionate about open source software
                 </h2>
             </div>
-            <img src="images/alvgonzx.gif" alt="alvgonzx" class="w-[200px]">
+            <img src="images/alvgonzx.gif" alt="alvgonzx" class="w-[200px]" />
         </section>
         <section class="mt-[356px]">
             <Title color="blue">projects</Title>
@@ -36,19 +36,45 @@ import Icon from "../components/Icon.astro";
         <section class="mt-[128px]">
             <Title color="orange">technologies</Title>
             <div class="mt-5 flex justify-start gap-8">
-                <Icon imgSrc="images/html.png" imgAlt="HTML logo"/>
-                <Icon imgSrc="images/css.png" imgAlt="CSS logo"/>
-                <Icon imgSrc="images/js.png" imgAlt="JS logo"/>
-                <Icon imgSrc="images/tailwind.png" imgAlt="Tailwind logo"/>
-                <Icon imgSrc="images/astro.png" imgAlt="Astro logo"/>
-                <Icon imgSrc="images/nodejs.png" imgAlt="NodeJS logo"/>
-                <Icon imgSrc="images/python.png" imgAlt="Python logo"/>
-                <Icon imgSrc="images/godot.png" imgAlt="Godot logo"/>
-                <Icon imgSrc="images/git.png" imgAlt="Git logo"/>
+                <Icon imgSrc="images/html.png" imgAlt="HTML logo" />
+                <Icon imgSrc="images/css.png" imgAlt="CSS logo" />
+                <Icon imgSrc="images/js.png" imgAlt="JS logo" />
+                <Icon imgSrc="images/tailwind.png" imgAlt="Tailwind logo" />
+                <Icon imgSrc="images/astro.png" imgAlt="Astro logo" />
+                <Icon imgSrc="images/nodejs.png" imgAlt="NodeJS logo" />
+                <Icon imgSrc="images/python.png" imgAlt="Python logo" />
+                <Icon imgSrc="images/godot.png" imgAlt="Godot logo" />
+                <Icon imgSrc="images/git.png" imgAlt="Git logo" />
             </div>
         </section>
         <section class="mt-[128px]">
             <Title color="green">about me</Title>
+            <div class="flex flex-row bg-[#242424] mt-5 p-8 rounded-3xl gap-8 items-center">
+                <img
+                    src="images/alvgonzx-right.png"
+                    alt="alvgonzx software developer"
+                    class="w-[115px]"
+                />
+                <div>
+                    <p class="text-xl font-semibold">Who am I?</p>
+                    <p class="text-[#16px] mt-1 text-[#DADADA]">
+                        My name is Alvaro and I am a software engineering
+                        student passionate about programming since I was 12
+                        years old. I started programming Discord bots as a
+                        hobby, then I learned some web development and began
+                        working on larger projects that solidified my knowledge.
+                    </p>
+                    <p class="text-xl mt-6 font-semibold">
+                        What am I doing now?
+                    </p>
+                    <p class="text-[#16px] mt-1 text-[#DADADA]">
+                        Currently, I am focusing on learning new technologies
+                        and continuing my education until I finish my studies. I
+                        am seeking to contribute to open-source projects
+                        although I am open to small freelance jobs as well.
+                    </p>
+                </div>
+            </div>
         </section>
     </main>
 </Layout>
@@ -76,6 +102,6 @@ import Icon from "../components/Icon.astro";
     }
 
     .text-shadow-green {
-        text-shadow: -2px -2px #539E43;
+        text-shadow: -2px -2px #539e43;
     }
 </style>
