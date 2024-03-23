@@ -7,16 +7,22 @@ import Icon from "../components/Icon.astro";
 
 <Layout title="alvgonzx - Indie developer">
     <main class="mx-[15%] mt-[128px]">
-        <section class="flex justify-between items-center">
+        <section
+            class="flex flex-col xl:flex-row xl:justify-between items-center xl:text-left text-center"
+        >
             <div>
-                <h1 class="text-7xl font-horizon text-shadow-red">alvgonzx</h1>
-                <h2 class="text-[18px]">
+                <h1
+                    class="text-4xl sm:text-6xl md:text-7xl font-horizon text-shadow-red"
+                >
+                    alvgonzx
+                </h1>
+                <h2 class="sm:text-[18px]">
                     indie developer who is passionate about open source software
                 </h2>
             </div>
             <img src="images/alvgonzx.gif" alt="alvgonzx" class="w-[200px]" />
         </section>
-        <section class="mt-[356px]">
+        <section class="mt-[200px] xl:mt-[356px]">
             <Title color="blue">projects</Title>
             <div class="mt-5 flex justify-start gap-16">
                 <ProjectCard
@@ -116,5 +122,11 @@ import Icon from "../components/Icon.astro";
 
     .text-shadow-green {
         text-shadow: -2px -2px #539e43;
+    }
+
+    @media screen and (max-width: 640px) {
+        .text-shadow-red {
+            text-shadow: -2px -2px #b74f6f;
+        }
     }
 </style>
