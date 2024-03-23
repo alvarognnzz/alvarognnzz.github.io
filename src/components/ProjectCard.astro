@@ -3,13 +3,13 @@ const { imgSrc, imgAlt, title, description, url } = Astro.props;
 ---
 
 <a
-    class="bg-[#242424] rounded-3xl w-[30%] hover:bg-[#2b2b2b] cursor-pointer transition-all"
+    class="bg-[#242424] rounded-3xl xl:w-[30%] hover:bg-[#2b2b2b] cursor-pointer transition-all"
     href={url}
 >
-    <div class="p-6">
+    <div class="p-6 flex flex-col md:text-start text-center">
         <img src={imgSrc} alt={imgAlt} />
-        <p class="text-xl font-semibold mt-4">{title}</p>
-        <p class="text-[#16px] mt-1 text-[#DADADA]">
+        <p class="md:text-xl font-semibold mt-4">{title}</p>
+        <p class="md:text-[#16px] mt-1 text-[#DADADA]">
             {description}
         </p>
     </div>
