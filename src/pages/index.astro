@@ -56,9 +56,9 @@ import Icon from "../components/Icon.astro";
             </div>
         </section>
         <section class="mt-[128px]">
-            <Title color="green">about me</Title>
+            <Title color="pink">about me</Title>
             <div
-                class="flex flex-row bg-[#242424] mt-5 p-8 rounded-3xl gap-8 items-center"
+                class="flex flex-col md:flex-row bg-[#242424] mt-5 p-8 rounded-3xl gap-8 items-center"
             >
                 <img
                     src="images/alvgonzx-right.png"
@@ -86,8 +86,8 @@ import Icon from "../components/Icon.astro";
                 </div>
             </div>
         </section>
-        <footer class="flex justify-center mt-[128px] mb-4">
-            <h1 class="text-xl font-horizon text-shadow-green">
+        <footer>
+            <h1 class="text-xl font-horizon text-shadow-green text-center mt-[128px] mb-5">
                 built by alvgonzx
             </h1>
         </footer>
@@ -124,6 +124,11 @@ import Icon from "../components/Icon.astro";
         text-shadow: -2px -2px #539e43;
     }
 
+    .text-shadow-pink {
+        text-shadow: -2px -2px #A944BA;
+    }
+
+    
     @media screen and (max-width: 640px) {
         .text-shadow-red {
             text-shadow: -2px -2px #b74f6f;
