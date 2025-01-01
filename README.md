@@ -10,10 +10,10 @@ Personal portfolio created using modern technologies like Astro and Tailwind.
 </p>
 
 ## Who am I?
-My name is Alvaro and I am a software engineering student passionate about programming since I was 12 years old. I started programming Discord bots as a hobby, then I learned some web development and began working on larger projects that solidified my knowledge.
+My name is Alvaro and I am an student passionate about programming since I was 12 years old. I started programming Discord bots as a hobby, then I learned some web development and finally I began working on larger projects involving game development.
 
 ## What am I doing now?
-Currently, I am focusing on learning new technologies and continuing my education until I finish my studies. I am seeking to contribute to open-source projects although I am open to small freelance jobs as well.
+Currently, I am focusing on my game Nuclear Meltdown and continuing my education until I finish my studies.
 
 ## Run locally
 
