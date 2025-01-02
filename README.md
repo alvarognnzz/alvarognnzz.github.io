@@ -1,12 +1,12 @@
-# alvgonzx.site
+# alvarognnzz.github.io
 
 ![Astro](https://img.shields.io/badge/astro-%232C2052.svg?style=for-the-badge&logo=astro&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
-Personal portfolio created using modern technologies like Astro and Tailwind.
+Personal portfolio.
 
 <p align="center">
-  <img src="https://github.com/alvgonzx/alvgonzx.site/assets/77798268/e63b777b-20dc-4e7a-b3a4-88b3f1b3fb56" />
+  <img src="https://github.com/user-attachments/assets/602d9fd4-c748-48fa-a5d2-425a4bd90151" />
 </p>
 
 ## Who am I?
@@ -19,7 +19,7 @@ Currently, I am focusing on my game Nuclear Meltdown and continuing my education
 
 ### Git clone
 ```
-git clone https://github.com/alvgonzx/alvgonzx.site.git
+git clone https://github.com/alvgonzx/alvarognnzz.github.io
 ```
 
 ### Install dependencies
