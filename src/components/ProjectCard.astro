@@ -1,16 +1,65 @@
 ---
-const { imgSrc, imgAlt, title, description, url } = Astro.props;
+const { images, title, description } = Astro.props;
 ---
 
-<a
-    class="bg-[#242424] rounded-3xl xl:w-[30%] hover:bg-[#2b2b2b] cursor-pointer transition-all"
-    href={url}
->
-    <div class="p-6 flex flex-col md:text-start text-center">
-        <img src={imgSrc} alt={imgAlt} />
-        <p class="md:text-xl font-semibold mt-4">{title}</p>
-        <p class="md:text-[#16px] mt-1 text-[#DADADA]">
-            {description}
-        </p>
+<div class="bg-[#242424] rounded-3xl xl:w-[30%] hover:bg-[#2b2b2b] cursor-pointer transition-all">
+  <div class="p-6 flex flex-col md:text-start text-center">
+    <div class="relative w-full overflow-hidden rounded-xl">
+      {images.length > 1 ? (
+        <>
+          <div
+            class="slider flex transition-transform duration-500"
+            style="--current: 0"
+          >
+            {images.map((image: { src: string; alt: string }) => (
+              <img src={image.src} alt={image.alt} class="w-full shrink-0" />
+            ))}
+          </div>
+          <button
+            type="button"
+            class="prev absolute top-1/2 left-2 -translate-y-1/2 bg-black/50 p-1 rounded-full text-white text-sm"
+          >
+            &#8592;
+          </button>
+          <button
+            type="button"
+            class="next absolute top-1/2 right-2 -translate-y-1/2 bg-black/50 p-1 rounded-full text-white text-sm"
+          >
+            &#8594;
+          </button>
+        </>
+      ) : (
+        <img
+          src={images[0].src}
+          alt={images[0].alt}
+          class="w-full shrink-0 rounded-xl"
+        />
+      )}
     </div>
-</a>
+    <p class="md:text-xl font-semibold mt-4">{title}</p>
+    <p class="md:text-[#16px] mt-1 text-[#DADADA]">{description}</p>
+  </div>
+</div>
+
+<script type="module">
+  const sliders = document.querySelectorAll(".slider");
+  sliders.forEach((slider) => {
+    const container = slider.parentElement;
+    const slides = slider.children;
+    let index = 0;
+
+    const update = () => {
+      slider.style.transform = `translateX(-${index * 100}%)`;
+    };
+
+    container.querySelector(".next").addEventListener("click", () => {
+      index = (index + 1) % slides.length;
+      update();
+    });
+
+    container.querySelector(".prev").addEventListener("click", () => {
+      index = (index - 1 + slides.length) % slides.length;
+      update();
+    });
+  });
+</script>

@@ -5,7 +5,7 @@ import ProjectCard from "../components/ProjectCard.astro";
 import Icon from "../components/Icon.astro";
 ---
 
-<Layout title="alvarognnzz - Indie developer">
+<Layout title="Álvaro González - Programador">
     <main class="mx-[12%] mt-[128px]">
         <section
             class="flex flex-col xl:flex-row xl:justify-between items-center xl:text-left text-center"
@@ -14,44 +14,86 @@ import Icon from "../components/Icon.astro";
                 <h1
                     class="text-4xl sm:text-6xl md:text-7xl font-horizon text-shadow-red"
                 >
-                    alvaro
-                    gnnzz
+                    alvaro gonzález
                 </h1>
                 <h2 class="sm:text-[18px] mt-[8px]">
-                    indie developer in Spain 🇪🇸
+                    Estudiante de ingeniería informática y programador
+                    freelance.
                 </h2>
             </div>
-            <img src="/images/alvarognnzz.png" alt="alvarognnzz" class="rounded-3xl mt-10 sm:mt-0 w-[400px]" />
+            <img
+                src="/images/alvarognnzz.png"
+                alt="alvarognnzz"
+                class="rounded-3xl mt-10 sm:mt-0 w-[400px]"
+            />
         </section>
         <section class="mt-[200px] xl:mt-[356px]">
-            <Title color="blue">projects</Title>
-            <div class="mt-5 flex flex-wrap justify-center md:justify-start gap-12">
+            <Title color="blue">proyectos</Title>
+            <div
+                class="mt-5 flex flex-wrap justify-center md:justify-start gap-12"
+            >
                 <ProjectCard
-                    imgSrc="/images/godot-asset-collection.png"
-                    imgAlt="Godot 4 assets"
-                    title="Godot asset collection"
-                    description="Collection of assets for creating FPS controllers using Godot 4. The collection is open source and available on GitHub."
-                    url="https://github.com/alvgonzx/Godot-Prototyping-FPS-Controller"
+                    images={[
+                        {
+                            src: "/images/elestudio-1.png",
+                            alt: "El Estudio",
+                        },
+                        {
+                            src: "/images/elestudio-2.png",
+                            alt: "El Estudio",
+                        },
+                        {
+                            src: "/images/elestudio-3.png",
+                            alt: "El Estudio",
+                        },
+                    ]}
+                    title="El Estudio"
+                    description="Aplicación web para subir canciones privadas, con autenticación avanzada, gestión de canciones, álbumes y descripciones detalladas de autores."
                 />
+
                 <ProjectCard
-                    imgSrc="/images/pit-stop-assemble.png"
-                    imgAlt="Pit Stop Assemble"
-                    title="Pit Stop Assemble"
-                    description="A short game for the Godot Game Jam 3. Assemble and fix racing cars in the pit stop! Playable on itch.io"
-                    url="https://alvarognnzz.itch.io/pit-stop-assemble"
+                    images={[
+                        {
+                            src: "/images/ambientcg-downloader.png",
+                            alt: "AmbientCG Downloader",
+                        },
+                    ]}
+                    title="ambientCG Downloader"
+                    description="Automatización para descargar todas las texturas de AmbientCG. Código abierto y personalizable mediante YAML."
                 />
+
                 <ProjectCard
-                    imgSrc="/images/skibidi-lang.png"
-                    imgAlt="Skibidi Lang"
-                    title="skibidi-lang"
-                    description="Interpreted language using brainrot words of tiktok as syntax. Made in Python."
-                    url="https://github.com/alvgonzx/skibidi-lang"
+                    images={[
+                        {
+                            src: "/images/entresemillas-1.png",
+                            alt: "Entresemillas 1",
+                        },
+                        {
+                            src: "/images/entresemillas-2.png",
+                            alt: "Entresemillas 1",
+                        }
+                    ]}
+                    title="entresemillas.com Web Scraper"
+                    description="Web scraper para entresemillas.com que descarga productos y los sube a un WordPress personalizado, modificando precio y otras características."
+                />
+
+                <ProjectCard
+                    images={[
+                        {
+                            src: "/images/ultimate-gpt-writer.png",
+                            alt: "Ultimate GPT Writer",
+                        },
+                    ]}
+                    title="Ultimate GPT Writer"
+                    description="Generador automático de artículos de más de 2000 palabras usando la API de OpenAI. Resultado final con calidad humana e IA casi indetectable."
                 />
             </div>
         </section>
         <section class="mt-[128px]">
-            <Title color="orange">TECH</Title>
-            <div class="mt-5 flex justify-center md:justify-start items-center flex-wrap gap-8">
+            <Title color="orange">tecnologías</Title>
+            <div
+                class="mt-5 flex justify-center md:justify-start items-center flex-wrap gap-8"
+            >
                 <Icon imgSrc="/images/html.png" imgAlt="HTML logo" />
                 <Icon imgSrc="/images/css.png" imgAlt="CSS logo" />
                 <Icon imgSrc="/images/js.png" imgAlt="JS logo" />
@@ -64,8 +106,10 @@ import Icon from "../components/Icon.astro";
             </div>
         </section>
         <footer>
-            <h1 class="text-xl font-horizon text-shadow-green text-center mt-[128px] mb-5">
-                built by alvarognnzz
+            <h1
+                class="text-xl font-horizon text-shadow-green text-center mt-[128px] mb-5"
+            >
+                desarrollado por álvaro gonzález
             </h1>
         </footer>
     </main>
@@ -98,10 +142,9 @@ import Icon from "../components/Icon.astro";
     }
 
     .text-shadow-pink {
-        text-shadow: -2px -2px #A944BA;
+        text-shadow: -2px -2px #a944ba;
     }
 
-    
     @media screen and (max-width: 640px) {
         .text-shadow-red {
             text-shadow: -2px -2px #b74f6f;
