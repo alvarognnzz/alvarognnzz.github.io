@@ -1,0 +1,9 @@
+---
+const { name, hoverColor } = Astro.props;
+---
+
+<div
+  class={`p-2 px-6 rounded-full border-[1px] border-[#252627] font-semibold text-white bg-[#0e0e0e] transition-all duration-300 ${hoverColor}`}
+>
+  {name}
+</div>

@@ -1,5 +1,3 @@
----
-const { color } = Astro.props;
----
-
-<p class={`text-4xl md:text-5xl font-horizon text-shadow-${color} text-center md:text-start`}><slot /></p>
+<span class="mt-40 flex justify-center text-5xl font-semibold leading-[1.5] gradient-text"
+    ><slot />
+</span>

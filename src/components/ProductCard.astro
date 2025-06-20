@@ -1,0 +1,17 @@
+---
+const { image, title, description, price } = Astro.props;
+---
+
+<div class="border-[#252627] border-[1px] w-[400px] rounded-xl bg-[#0e0e0e]">
+  <div class="p-6">
+    <img src={image.src} alt="" />
+    <p class="text-2xl pt-4 font-semibold">{title}</p>
+    <p class="pt-2 text-[#abafb4]">{description}</p>
+    <a href="#" class="mt-4 inline-flex items-center gap-2 bg-[#209b78] text-sm text-white px-4 py-[6px] rounded-full hover:bg-[#1a7e63] transition">
+      Desde {price}$
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42L17.59 5H14V3ZM5 5h7v2H7v10h10v-5h2v7H5V5Z"/>
+      </svg>
+    </a>
+  </div>
+</div>
