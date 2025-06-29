@@ -1,279 +1,549 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Title from "../components/Title.astro";
-import ProjectCard from "../components/ProjectCard.astro";
-import ProductCard from "../components/ProductCard.astro";
-import TechnologyCard from "../components/TechnologyCard.astro";
-
-const techs = [
-    { name: "HTML", hoverColor: "hover:border-[#df8946] hover:text-[#df8946]" },
-    { name: "CSS", hoverColor: "hover:border-[#4693df] hover:text-[#4693df]" },
-    {
-        name: "JavaScript",
-        hoverColor: "hover:border-[#ffda37] hover:text-[#ffda37]",
-    },
-    {
-        name: "Tailwind",
-        hoverColor: "hover:border-[#46dfda] hover:text-[#46dfda]",
-    },
-    {
-        name: "Python",
-        hoverColor: "hover:border-[#4671df] hover:text-[#4671df]",
-    },
-    {
-        name: "Godot Engine",
-        hoverColor: "hover:border-[#30639c] hover:text-[#30639c]",
-    },
-    { name: "Git", hoverColor: "hover:border-[#9c4630] hover:text-[#9c4630]" },
-];
+import "../styles/global.css";
 ---
 
-<Layout title="Álvaro González - Programador">
-    <main class="effect-background">
-        <section class="pt-[40vh] mb-40">
-            <div>
-                <h1 class="text-6xl text-center font-semibold gradient-text">
-                    Alvaro González
-                </h1>
-                <h2 class="text-center mt-4 text-lg text-[#abafb4] font-400]">
-                    Estudiante y programador freelance.
-                </h2>
-            </div>
-            <div class="mt-10 flex justify-center gap-8">
-                <a
-                    href="#productos"
-                    class="px-6 font-semibold text-black rounded-[100px] bg-white hover:bg-[#eeeeee] transition-all flex items-center"
-                >
-                    Productos
-                    <span class="text-[#70757E] -mr-2">
-                        <svg
-                            fill="none"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                d="M10.75 8.75L14.25 12L10.75 15.25"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="1.5"
-                            />
-                        </svg>
-                    </span>
-                </a>
-                <a
-                    href="#proyectos"
-                    class="px-6 py-2 font-semibold text-[#abafb4] border-2 rounded-[100px] border-transparent hover:bg-[#1f2225] transition-all flex items-center"
-                >
-                    Proyectos
-                    <span class="text-[#70757E] -mr-2">
-                        <svg
-                            fill="none"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                d="M10.75 8.75L14.25 12L10.75 15.25"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="1.5"
-                            />
-                        </svg>
-                    </span>
-                </a>
-            </div>
-        </section>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Álvaro González</title>
+		<meta
+			name="description"
+			content="Full-stack SaaS development, cloud architecture, and deployment. From MVP to enterprise."
+		/>
+	</head>
+	<body class="font-mono bg-white text-black">
+		<div class="flex flex-col px-50">
+			<!-- Header -->
+			<header
+				class="px-6 h-16 flex items-center border-b border-gray-200"
+			>
+				<a href="/" class="flex items-center">
+					<svg
+						class="h-5 w-5 mr-2"
+						fill="none"
+						stroke="currentColor"
+						viewBox="0 0 24 24"
+					>
+						<rect x="3" y="3" width="18" height="18" rx="2" ry="2"
+						></rect>
+						<circle cx="9" cy="9" r="2"></circle>
+					</svg>
+					<span class="text-lg font-medium">Álvaro González</span>
+				</a>
+				<nav class="ml-auto flex gap-8">
+					<a
+						href="#services"
+						class="text-sm hover:text-gray-600 transition-colors"
+						>services</a
+					>
+					<a
+						href="#work"
+						class="text-sm hover:text-gray-600 transition-colors"
+						>work</a
+					>
+					<a
+						href="#contact"
+						class="text-sm hover:text-gray-600 transition-colors"
+						>contact</a
+					>
+				</nav>
+			</header>
 
-        <section id="productos" class="pt-52 mb-40 pb-52">
-            <p class="flex justify-center text-5xl font-semibold leading-[1.5] gradient-text text-center">
-                Productos digitales
-            </p>
-            <div class="flex flex-wrap justify-center gap-6 mx-[20%] mt-6">
-                <ProductCard
-                    image={{
-                        src: "/images/vibe-editor.png",
-                        alt: "Vibe Editor",
-                    }}
-                    title="Vibe Editor"
-                    description="Creador de TikToks/Reels 100% automático que usa la API de OpenAI para guenerar guiones, escribir subtítulos y Text-to-Speech. 3 modos a elegir y diferentes estilos de vídeo."
-                    price="15"
-                    link="https://forobeta.com/temas/boton-gratis-creador-de-tiktoks-reels-automatico-signo-de-dolar-pesado-desde-15.1059715/"
-                />
-                <ProductCard
-                    image={{
-                        src: "/images/vibe-writer.png",
-                        alt: "Vibe Writer",
-                    }}
-                    title="Vibe Writer"
-                    description="Creador de artículos SEO automático (+2000 palabras cada uno) que usa la API de OpenAI."
-                    price="12",
-                    link="#"
-                />
-            </div>
-        </section>
+			<main class="flex-1">
+				<!-- Hero Section -->
+				<section class="px-6 py-24 md:py-32">
+					<div class="max-w-4xl">
+						<div class="space-y-8">
+							<div class="space-y-4">
+								<p class="text-sm text-gray-600">
+									// programador y estudiante desde 2020
+								</p>
+								<h1
+									class="text-4xl md:text-6xl font-medium leading-tight"
+								>
+									Álvaro González<br />
+									<span class="text-gray-600"
+										>programador.</span
+									>
+								</h1>
+								<p
+									class="text-lg text-gray-600 max-w-2xl leading-relaxed"
+								>
+									Desarrollo aplicaciones web y sistemas
+									automáticos.<br />
+								</p>
+							</div>
+							<div class="flex gap-4">
+								<a
+									href="#contact"
+									class="bg-black text-white hover:bg-gray-800 font-mono px-6 py-3 text-sm transition-colors inline-block"
+								>
+									Empezar un proyecto →
+								</a>
+								<a
+									href="#work"
+									class="font-mono border border-gray-300 hover:bg-gray-50 bg-transparent px-6 py-3 text-sm transition-colors inline-block"
+								>
+									ver mi trabajo
+								</a>
+							</div>
+							<div class="pt-8 space-y-2 text-sm text-gray-500">
+								<p>✓ Entrega puntual y compromiso con plazos</p>
+								<p>✓ Comunicación clara y constante</p>
+								<p>✓ Feedback rápido, mejoras continuas</p>
+							</div>
+						</div>
+					</div>
+				</section>
 
-        <section id="proyectos">
-            <p class="flex justify-center text-5xl font-semibold leading-[1.5] gradient-text">
-                Proyectos
-            </p>
-            <div class="flex flex-wrap justify-center gap-6 mx-[20%] mt-6">
-                <ProjectCard
-                    image={{
-                        src: "/images/elestudio-2.png",
-                        alt: "El Estudio",
-                    }}
-                    title="El Estudio"
-                    description="Aplicación web para subir canciones privadas, con autenticación avanzada, gestión de canciones, álbumes, descripciones detalladas de autores y modo karaoke."
-                />
-                <ProjectCard
-                    image={{
-                        src: "/images/ambientcg-downloader.png",
-                        alt: "AmbientCG downloader",
-                    }}
-                    title="ambientCG Downloader"
-                    description="Automatización para descargar todas las texturas de AmbientCG. Código abierto y personalizable mediante YAML."
-                />
-                <ProjectCard
-                    image={{
-                        src: "/images/entresemillas-1.png",
-                        alt: "entresemillas Web Scraper",
-                    }}
-                    title="entresemillas.com Web Scraper"
-                    description="Web scraper para entresemillas.com que descarga productos y los sube a un WordPress personalizado, modificando precio y otras características."
-                />
-                <ProjectCard
-                    image={{
-                        src: "/images/godot-asset-collection.png",
-                        alt: "Godot Asset Collection",
-                    }}
-                    title="Godot Asset Collection"
-                    description="Colección de controladores y sistemas listos para usar para desarrollo de videojuegos en el motor Godot Engine."
-                />
-            </div>
-        </section>
+				<!-- Services Section -->
+				<section
+					id="services"
+					class="px-6 py-24 border-t border-gray-200"
+				>
+					<div class="max-w-6xl">
+						<div class="mb-16">
+							<p class="text-sm text-gray-600 mb-4">
+								// qué es lo que hago
+							</p>
+							<h2 class="text-3xl md:text-4xl font-medium mb-4">
+								servicios
+							</h2>
+							<p class="text-lg text-gray-600 max-w-2xl">
+								tu idea, hecha realidad.
+							</p>
+						</div>
 
-        <section class="pt-52 px-4 sm:px-12 md:px-[10%] lg:px-[15%] xl:px-[20%]">
-            <p class="mt-40 flex justify-center text-5xl font-semibold leading-[1.5] gradient-text">
-                Tecnologías
-            </p>
-            <div class="flex justify-center mt-6 flex-wrap gap-6">
-                {
-                    techs.map((tech) => (
-                        <TechnologyCard
-                            name={tech.name}
-                            hoverColor={tech.hoverColor}
-                        />
-                    ))
-                }
-            </div>
-        </section>
+						<div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+							<div class="space-y-4">
+								<svg
+									class="h-6 w-6"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<circle cx="12" cy="12" r="10"></circle>
+									<line x1="2" y1="12" x2="22" y2="12"></line>
+									<path
+										d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+									></path>
+								</svg>
+								<div>
+									<h3 class="text-lg font-medium mb-2">
+										desarrollo full-stack
+									</h3>
+									<p class="text-sm text-gray-600 mb-4">
+										next.js y python + fastapi.<br />
+									</p>
+									<ul class="text-xs text-gray-500 space-y-1">
+										<li>• frontend & backend</li>
+										<li>• diseño de api & base de datos</li>
+										<li>• infraestructura</li>
+									</ul>
+								</div>
+							</div>
 
-        <span class="ball"></span>
-        <span class="ball"></span>
-        <span class="ball"></span>
-        <span class="ball"></span>
-        <span class="ball"></span>
-        <span class="ball"></span>
+							<div class="space-y-4">
+								<svg
+									class="h-6 w-6"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<line x1="18" y1="20" x2="18" y2="10"
+									></line>
+									<line x1="12" y1="20" x2="12" y2="4"></line>
+									<line x1="6" y1="20" x2="6" y2="14"></line>
+								</svg>
+								<div>
+									<h3 class="text-lg font-medium mb-2">
+										automatizaciones
+									</h3>
+									<p class="text-sm text-gray-600 mb-4">
+										python + herramientas externas
+									</p>
+									<ul class="text-xs text-gray-500 space-y-1">
+										<li>• LLMs como ChatGPT</li>
+										<li>
+											• vídeos personalizados usando
+											ffmpeg
+										</li>
+										<li>
+											• interación con whatsapp, telegram
+											y similares
+										</li>
+									</ul>
+								</div>
+							</div>
 
-        <footer class="text-center mt-52 py-6">
-            <p>Desarrollado por Alvaro González</p>
-        </footer>
-    </main>
+							<div class="space-y-4">
+								<svg
+									class="h-6 w-6"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<polygon
+										points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"
+									></polygon>
+								</svg>
+								<div>
+									<h3 class="text-lg font-medium mb-2">
+										web scraping
+									</h3>
+									<p class="text-sm text-gray-600 mb-4">
+										python + bs4 + selenium
+									</p>
+									<ul class="text-xs text-gray-500 space-y-1">
+										<li>
+											• obtengo datos de cualquier lugar
+											de Internet
+										</li>
+										<li>
+											• formateo en Excel, csv, y demás
+										</li>
+										<li>• análisis de los datos</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
 
-    <style>
-        *, html {
-            scroll-behavior: smooth !important;
-        }
+				<!-- Tech Stack -->
+				<section class="px-6 py-24 bg-gray-50">
+					<div class="max-w-6xl">
+						<div class="mb-16">
+							<p class="text-sm text-gray-600 mb-4">
+								// mi stack
+							</p>
+							<h2 class="text-3xl md:text-4xl font-medium mb-4">
+								tecnologías
+							</h2>
+						</div>
 
-        .gradient-text {
-            background: linear-gradient(to top, #999999 0%, #ffffff 20%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+						<div class="grid gap-12 md:grid-cols-4">
+							<div>
+								<h3
+									class="text-sm font-medium mb-4 text-gray-800"
+								>
+									frontend
+								</h3>
+								<ul class="text-sm text-gray-600 space-y-2">
+									<li>react</li>
+									<li>next.js</li>
+									<li>astro</li>
+									<li>tailwind css</li>
+								</ul>
+							</div>
+							<div>
+								<h3
+									class="text-sm font-medium mb-4 text-gray-800"
+								>
+									backend
+								</h3>
+								<ul class="text-sm text-gray-600 space-y-2">
+									<li>python</li>
+									<li>postgresql</li>
+								</ul>
+							</div>
+							<div>
+								<h3
+									class="text-sm font-medium mb-4 text-gray-800"
+								>
+									automatización
+								</h3>
+								<ul class="text-sm text-gray-600 space-y-2">
+									<li>openAI</li>
+									<li>whisper</li>
+									<li>ffmpeg</li>
+								</ul>
+							</div>
+							<div>
+								<h3
+									class="text-sm font-medium mb-4 text-gray-800"
+								>
+									herramientas
+								</h3>
+								<ul class="text-sm text-gray-600 space-y-2">
+									<li>git</li>
+									<li>linux</li>
+									<li>docker</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</section>
 
-        @keyframes move {
-            100% {
-                transform: translate3d(0, 0, 1px) rotate(360deg);
-            }
-        }
+				<!-- Work Section -->
+				<section id="work" class="px-6 py-24">
+					<div class="max-w-6xl">
+						<div class="mb-16">
+							<p class="text-sm text-gray-600 mb-4">
+								// algunos de mis proyectos
+							</p>
+							<h2 class="text-3xl md:text-4xl font-medium mb-4">
+								mi trabajo
+							</h2>
+						</div>
 
-        .effect-background {
-            position: fixed;
-            width: 100vw;
-            height: 100vh;
-            top: 0;
-            left: 0;
-            overflow-x: hidden;
-        }
+						<div class="space-y-16">
+							<div class="grid gap-8 md:grid-cols-2 items-start">
+								<div>
+									<h3 class="text-xl font-medium mb-2">
+										vidframe
+									</h3>
+									<p class="text-sm text-gray-600 mb-4">
+										edición de video usando nodos<br />
+										optimizado para automatizar el proceso
+									</p>
+									<div class="flex flex-wrap gap-2 mb-4">
+										<span
+											class="text-xs px-2 py-1 bg-gray-100 rounded"
+											>nextjs</span
+										>
+										<span
+											class="text-xs px-2 py-1 bg-gray-100 rounded"
+											>python</span
+										>
+										<span
+											class="text-xs px-2 py-1 bg-gray-100 rounded"
+											>fastapi</span
+										>
+										<span
+											class="text-xs px-2 py-1 bg-gray-100 rounded"
+											>postgresql</span
+										>
+										<span
+											class="text-xs px-2 py-1 bg-gray-100 rounded"
+											>ffmpeg</span
+										>
+									</div>
+									<p class="text-xs text-gray-500">
+										* aplicación en desarrollo
+									</p>
+								</div>
+								<div
+									class="bg-gray-100 aspect-video rounded flex items-center justify-center"
+								>
+									<img src="/images/work/vidframe.png" alt="vidframe">
+								</div>
+							</div>
 
-        .ball {
-            z-index: -1;
-            position: absolute;
-            width: 20vmin;
-            height: 20vmin;
-            border-radius: 50%;
-            backface-visibility: hidden;
-            animation: move linear infinite;
-        }
+							<div class="grid gap-8 md:grid-cols-2 items-start">
+								<div class="md:order-2">
+									<h3 class="text-xl font-medium mb-2">
+										vibe editor
+									</h3>
+									<p class="text-sm text-gray-600 mb-4">
+										creador de vídeos virales<br />
+										para tiktok / youtube shorts / instagram
+										reels
+									</p>
+									<div class="flex flex-wrap gap-2 mb-4">
+										<span
+											class="text-xs px-2 py-1 bg-gray-100 rounded"
+											>react</span
+										>
+										<span
+											class="text-xs px-2 py-1 bg-gray-100 rounded"
+											>python</span
+										>
+										<span
+											class="text-xs px-2 py-1 bg-gray-100 rounded"
+											>flask</span
+										>
+										<span
+											class="text-xs px-2 py-1 bg-gray-100 rounded"
+											>ffmpeg</span
+										>
+									</div>
+									<a class="text-xs text-gray-500">
+										aplicación en venta
+									</a>
+								</div>
+								<div
+									class="bg-gray-100 aspect-video rounded flex items-center justify-center md:order-1"
+								>
+									<img src="/images/work/vibe-editor.gif" alt="vibe editor">
+								</div>
+							</div>
 
-        .ball:nth-child(1) {
-            color: #633057;
-            top: 77%;
-            left: 88%;
-            animation-duration: 40s;
-            animation-delay: -3s;
-            transform-origin: 16vw -2vh;
-            box-shadow: 40vmin 0 5.703076368487546vmin currentColor;
-        }
-        .ball:nth-child(2) {
-            color: #22755e;
-            top: 42%;
-            left: 2%;
-            animation-duration: 53s;
-            animation-delay: -29s;
-            transform-origin: -19vw 21vh;
-            box-shadow: -40vmin 0 5.17594621519026vmin currentColor;
-        }
-        .ball:nth-child(3) {
-            color: #795f1e;
-            top: 28%;
-            left: 18%;
-            animation-duration: 49s;
-            animation-delay: -8s;
-            transform-origin: -22vw 3vh;
-            box-shadow: 40vmin 0 5.248179047256236vmin currentColor;
-        }
-        .ball:nth-child(4) {
-            color: #71433e;
-            top: 50%;
-            left: 79%;
-            animation-duration: 26s;
-            animation-delay: -21s;
-            transform-origin: -17vw -6vh;
-            box-shadow: 40vmin 0 5.279749632220298vmin currentColor;
-        }
-        .ball:nth-child(5) {
-            color: #4f1779;
-            top: 46%;
-            left: 15%;
-            animation-duration: 36s;
-            animation-delay: -40s;
-            transform-origin: 4vw 0vh;
-            box-shadow: -40vmin 0 5.964309466052033vmin currentColor;
-        }
-        .ball:nth-child(6) {
-            color: #596836;
-            top: 77%;
-            left: 16%;
-            animation-duration: 31s;
-            animation-delay: -10s;
-            transform-origin: 18vw 4vh;
-            box-shadow: 40vmin 0 5.178483653434181vmin currentColor;
-        }
-    </style>
-</Layout>
+							<div class="grid gap-8 md:grid-cols-2 items-start">
+								<div>
+									<h3 class="text-xl font-medium mb-2">
+										vibe writer
+									</h3>
+									<p class="text-sm text-gray-600 mb-4">
+										creador de artículos SEO<br />
+										con exportación a html, modo bulk
+									</p>
+									<div class="flex flex-wrap gap-2 mb-4">
+										<span
+											class="text-xs px-2 py-1 bg-gray-100 rounded"
+											>react</span
+										>
+										<span
+											class="text-xs px-2 py-1 bg-gray-100 rounded"
+											>python</span
+										>
+										<span
+											class="text-xs px-2 py-1 bg-gray-100 rounded"
+											>flask</span
+										>
+										<span
+											class="text-xs px-2 py-1 bg-gray-100 rounded"
+											>openAI</span
+										>
+									</div>
+									<a class="text-xs text-gray-500">
+										aplicación en venta
+									</a>
+								</div>
+								<div
+									class="bg-gray-100 aspect-video rounded flex items-center justify-center"
+								>
+									<img src="/images/work/vibe-writer.png" alt="vibe writer">
+								</div>
+							</div>
+
+							<div class="grid gap-8 md:grid-cols-2 items-start">
+								<div class="md:order-2">
+									<h3 class="text-xl font-medium mb-2">
+										el estudio
+									</h3>
+									<p class="text-sm text-gray-600 mb-4">
+										aplicación web para subir canciones
+										privadas<br />
+										autenticación, gestión de canciones, descripciones
+										de autores y modo karaoke
+									</p>
+									<div class="flex flex-wrap gap-2 mb-4">
+										<span
+											class="text-xs px-2 py-1 bg-gray-100 rounded"
+											>jinja2</span
+										>
+										<span
+											class="text-xs px-2 py-1 bg-gray-100 rounded"
+											>python</span
+										>
+										<span
+											class="text-xs px-2 py-1 bg-gray-100 rounded"
+											>flask</span
+										>
+									</div>
+									<p class="text-xs text-gray-500">
+										aplicación privada
+									</p>
+								</div>
+								<div
+									class="bg-gray-100 aspect-video rounded flex items-center justify-center md:order-1"
+								>
+									<img src="images/work/elestudio.png" alt="el estudio">
+								</div>
+							</div>
+							<div class="grid gap-8 md:grid-cols-2 items-start">
+								<div>
+									<h3 class="text-xl font-medium mb-2">
+										ambientCG downloader
+									</h3>
+									<p class="text-sm text-gray-600 mb-4">
+										descargar todas las texturas de AmbientCG<br />
+										personalizable mediante YAML
+									</p>
+									<div class="flex flex-wrap gap-2 mb-4">
+										<span
+											class="text-xs px-2 py-1 bg-gray-100 rounded"
+											>python</span
+										>
+									</div>
+									<a class="text-xs text-gray-500">
+										aplicación de código abierto
+									</a>
+								</div>
+								<div
+									class="bg-white aspect-video rounded flex items-center justify-center"
+								>
+									<img src="/images/work/ambientcg-downloader.png" alt="ambientcg downloader">
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Contact Section -->
+				<section id="contact" class="px-6 py-24 bg-black text-white">
+					<div class="max-w-4xl">
+						<div class="space-y-8">
+							<div>
+								<p class="text-sm text-gray-400 mb-4">
+									// trabajemos juntos
+								</p>
+								<h2
+									class="text-3xl md:text-4xl font-medium mb-4"
+								>
+									quieres construir<br />
+									tu idea?
+								</h2>
+								<p class="text-lg text-gray-300 max-w-2xl">
+									escríbeme sobre tu proyecto.
+									haré un plan<br />
+									personalizado que se ajuste a tu presupuesto y tiempo
+								</p>
+							</div>
+
+							<div class="pt-2 space-y-4">
+								<div class="flex gap-8">
+									<div>
+										<p class="text-sm text-gray-400 mb-1">
+											email
+										</p>
+										<p class="text-sm">
+											alvgonz.ojeda@gmail.com
+										</p>
+									</div>
+									<div>
+										<p class="text-sm text-gray-400 mb-1">
+											tiempo de respuesta
+										</p>
+										<p class="text-sm">
+											menos de 24 horas
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+
+			<!-- Footer -->
+			<footer class="px-6 py-8 border-t border-gray-200 bg-white">
+				<div
+					class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4"
+				>
+					<div class="flex items-center">
+						<svg
+							class="h-4 w-4 mr-2"
+							fill="none"
+							stroke="currentColor"
+							viewBox="0 0 24 24"
+						>
+							<rect
+								x="3"
+								y="3"
+								width="18"
+								height="18"
+								rx="2"
+								ry="2"></rect>
+							<circle cx="9" cy="9" r="2"></circle>
+						</svg>
+						<span class="text-sm">Álvaro González</span>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>
